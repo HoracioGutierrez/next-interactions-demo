@@ -3,7 +3,7 @@ import { DemoType } from "@/models/demos";
 
 const getDemos = async () => {
     try {
-        const response = await fetch('http://localhost:3000/api/demos')
+        const response = await fetch(process.env.BASE_URL + '/api/demos')
         const { payload } = await response.json()
         return { payload, error: null }
     } catch (error) {
@@ -20,7 +20,7 @@ export default async function DemoOne() {
     return (
         <Page title="Demo One">
             <section>
-                <p>En este otro demo intento demostrar lo mismo que en la landing pero accediendo a informacion que no tenemos hardcodeada, es decir proveniente de una base de datos o una api.</p> 
+                <p>En este otro demo intento demostrar lo mismo que en la landing pero accediendo a informacion que no tenemos hardcodeada, es decir proveniente de una base de datos o una api.</p>
             </section>
             <section>
                 <h2>Lista de Demos</h2>
