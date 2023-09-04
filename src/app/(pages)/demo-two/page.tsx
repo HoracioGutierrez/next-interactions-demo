@@ -10,12 +10,12 @@ export default async function DemoTwo() {
     return (
         <Page title="Demo Two">
             <section>
-                <p>En este otro demo intento demostrar lo mismo que en el demo uno pero el leve cambio es que el metodo para pedir demos viene de un archivo utils en vez de estar colocalizado en el mismo archivo del componente.</p> 
+                <p>En este otro demo intento demostrar lo mismo que en el demo uno pero el leve cambio es que el metodo para pedir demos viene de un archivo utils en vez de estar colocalizado en el mismo archivo del componente.</p>
             </section>
             <section>
                 <h2>Lista de Demos</h2>
                 <div className="demo-container">
-                    {payload && payload.demos && payload.demos.map((demo: DemoType, i: number) => {
+                    {payload.demos.map((demo: DemoType, i: number) => {
                         return (
                             <article key={i} className="demo">
                                 <h3>{demo.name}</h3>
