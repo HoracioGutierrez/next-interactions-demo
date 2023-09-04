@@ -15,7 +15,7 @@ export default async function DemoTwo() {
             <section>
                 <h2>Lista de Demos</h2>
                 <div className="demo-container">
-                    {payload.demos.map((demo: DemoType, i: number) => {
+                    {payload && payload.demos && payload.demos.map((demo: DemoType, i: number) => {
                         return (
                             <article key={i} className="demo">
                                 <h3>{demo.name}</h3>
