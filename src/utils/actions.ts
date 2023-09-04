@@ -1,9 +1,9 @@
 export const getDemos = async () => {
     try {
         const response = await fetch('http://localhost:3000/api/demos')
-        const data = await response.json()
-        return data
+        const { payload } = await response.json()
+        return { payload, error: null }
     } catch (error) {
-        return error
+        return { payload: null, error }
     }
 }
